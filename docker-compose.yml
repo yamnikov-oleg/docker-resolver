@@ -1,0 +1,8 @@
+version: '2'
+services:
+  listener:
+    build: .
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
